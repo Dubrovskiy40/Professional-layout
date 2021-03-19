@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1600px;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+}
+
+.header {
+    background-color: #222222;
+    padding: 18px 0;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left__logo {
+    margin-right: 41px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__section {
+    list-style-type: none;
+}
+
+.menu__user {
+    margin-right: 33px;
+    margin-left: 33px;
+}
+
+.menu__cart {
+    margin-right: 10px;
+}
+
+.main__top__wrap {
+    background: #F1E4E6;
+}
+
+.main__top {
+    background-image: url(../images/index/background_image.png);
+    background-position: -224px bottom;
+    background-repeat: no-repeat;
+}
+
+.main__top__text {
+    display: flex;
+    align-items: center;
+    height: 764px;
+    justify-content: flex-end;
+}
+
+.main-title {
+    margin: 0;
+    border-left: 12px solid #F16D7F;
+    width: 50%;
+    margin-left: 64px;
+    padding-left: 16px;
+    margin-top: -92px;
+}
+
+.main-title span:first-child {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    font-style: normal;
+}
+
+.main-title span:nth-of-type(2) {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    font-style: normal;
+}
+
+.main-title span:last-child {
+    color: #F16D7F;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    font-style: normal;
+}
+
+.center {
+    padding: 0 calc(50% - 1140px / 2);
+}
+
+.main__center {
+    margin-top: 65px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.main__center_wrap {
+    position: relative;
+}
+
+.main__center_text {
+    position: absolute;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    top: 100px;
+    left: 120px;
+}
+
+.main__center_text span {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #F16D7F;;
+}
+
+.main__center_text-4 {
+    top: 66px;
+    left: 490px;
+    white-space: nowrap;
+}
+
+.look_4 {
+    grid-column: span 3;
+}
+
+.main__footer {
+    padding: 96px 0;
+    text-align: center;
+}
+
+.main__footer__title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #222222;
+}
+
+.main__footer__text {
+    margin-top: 6px;
+    margin-bottom: 48px;
+}
+
+.cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card_content {
+    text-align: left;
+    padding: 25px 28px 20px 16px;
+}
+
+.card_title {
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.card_text {
+    padding: 13px 0 18px;
+}
+
+.price {
+    font-size: 16px;
+    line-height: 19px;
+    color: #F16D7F;
+}
+
+.card_button {
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    border: 1px solid #FF6A6A;
+    padding: 14px 38px;
+    max-width: 211px;
+    margin: 18px auto 0;
+    grid-column: 1/-1;
+    white-space: nowrap;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.footer__top__wrap {
+    background-color: #222224;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between; 
+    padding: 103px 230px;
+    text-align: center;
+}
+
+.footer__top__title {
+    font-size: 19.96px;
+    line-height: 24px;
+    color: #FBFBFB;
+    margin-top: 28px;
+    margin-bottom: 16px;
+}
+
+.sales_discounts {
+    margin-left: 30px; /****УТОЧНИТЬ*****/
+    margin-right: 30px;
+}
+
+.footer__main {
+    background-image: url(../images/index/footer_background_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__main__content {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer__wrap_main {
+    width: 50%;
+    padding: 86px 164px 126px 0;
+}
+
+.footer_img {
+    margin-bottom: 30px;
+}
+
+.footer__main_text {
+    font-size: 20px;
+    line-height: 24px;
+    color: #222224;
+}
+
+.footer__wrap_form {
+    width: 50%;
+    padding: 150px 0 156px 164px; 
+}
+
+.footer__form_title span {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: #222224;
+}
+
+.footer__form_title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #222224;
+    margin-bottom: 32px;
+}
+
+.footer__form {
+    max-width: 100%;
+    display: flex;
+}
+
+.footer__input, 
+.footer__button { 
+    border: 0;
+    background: transparent;
+    box-sizing: border-box; 
+}
+
+.footer__input {
+    background: #E1E1E1;
+    padding: 16px 64px 16px 22px;
+    border-radius: 25px 0 0 25px;
+    border-right: 0;
+    width: 256px;
+    height: 49px;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.67;
+}
+
+.footer__button {
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #F16D7F;
+    padding: 16px 8px;
+    border-radius: 0 25px 25px 0;
+    width: 100px;
+}
+
+.footer__bottom__wrap {
+    background-color: #222224;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyriting {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer__bottom_text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBFBFB;
+}
+
+.share {
+padding-top: 24px;
+padding-bottom: 24px;
+}
+
+.social {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    background: url(../images/index/social_icon.png) no-repeat;
+}
+
+.social_facebook {
+    background-position: 0 0;
+}
+
+.social_instagram {
+    background-position: -38px 0;
+}
+
+.social_pinteres {
+    background-position: -77px 0;
+}
+
+.social_twitter {
+    background-position: -116px 0;
+}
