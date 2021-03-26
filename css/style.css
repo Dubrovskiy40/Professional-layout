@@ -71,7 +71,7 @@ body {
 }
 
 .main__top {
-    background-image: url(../images/index/background_image.png);
+    background-image: url(../images/index/background-image.png);
     background-position: -224px bottom;
     background-repeat: no-repeat;
 }
@@ -123,7 +123,7 @@ body {
     display: grid;
     gap: 30px;
     grid-template-columns: 
-        repeat(auto-fit, minmax(350px, 1fr));
+        repeat(auto-fit, 356px);
 }
 
 .main__center-wrap {
@@ -176,13 +176,56 @@ body {
 .cards {
     display: grid;
     gap: 30px;
-    grid-template-columns: 
-        repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, 360px);
 }
 
+/***Наведение на card***/
 .card {
     background: #F8F8F8;
+    position: relative;
+    transition: 0.5s;
 }
+
+.card:hover {
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 420px;
+    background-color: rgba(58, 56, 56, 0.86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.btn {
+    border: 1px solid #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 13px 16px 12px 50px;
+    position: relative;
+    background: rgba(58, 56, 56, 0.43);
+}
+
+.cart_hover {
+    position: absolute;
+    margin: auto;
+    top: 10px;
+    bottom: 8px;
+    left: 13px;
+}
+/***Наведение на card***/
 
 .card_content {
     text-align: left;
@@ -228,20 +271,6 @@ body {
     background-color: #F16D7F;
 }
 
-/****Наведение на карточку***/
-/*.card:hover:after {
-    width: 360px;
-    height: 330px;
-    padding-top: 120px;
-    position: absolute;
-    margin-left: -180px;
-    content: url(../images/index/cart_fon.png);
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-}*/
-
 
 
 .our_pluses {
@@ -280,7 +309,7 @@ body {
 
 
 .feedback {
-    background-image: url(../images/index/footer_background_image.jpg);
+    background-image: url(../images/index/footer-background-image.jpg);
     background-repeat: no-repeat;
     background-position: center;
     margin-top: auto;
@@ -415,25 +444,35 @@ list-style-type: none;
 }
 
 .social {
-    width: 32px;
-    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.fa-facebook-f {
+    padding: 8px 11.5px;
+}
+
+.fa-instagram {
+    padding: 8px 8px;
+}
+
+.fa-pinterest-p {
+    padding: 8px 10px;
+}
+
+.fa-twitter {
+    padding: 9.5px 8px;
+}
+
+.svg-inline--fa {
+    fill: #000000;
     margin-left: 8px;
+    background-color: #FFFFFF;
 }
-/***Переделать наведение на иконки соцсетей***/
-.social {
-    display: inline-block;
-    position: relative;    
-    line-height: 0;
-}
-.social:hover:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;    
-    position: absolute;
-    top: 0;    
-    left: 0;   
-    background: transparent;
-    background-image: url(../images/index/test_icons.png);    
-    opacity: 0.8;  
+
+.svg-inline--fa:hover {
+    fill: #FFFFFF;
+    background-color: #F16D7F;
 }
