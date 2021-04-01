@@ -1,0 +1,75 @@
+.header {
+   background-color: $color-gray;
+   padding: 18px 0;
+
+   &__left-logo {
+      margin-right: 41px;
+      text-decoration: none;
+   }
+
+}
+
+.wrap {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+.menu {
+   display: flex;
+   align-items: center;
+
+   &__section {
+      list-style-type: none;
+   }
+
+   &__section-burger {
+      fill: $color-white_1;
+      background: $color-gray;
+      outline: none;
+
+      &:hover {
+         @include svg-hover;
+      }
+
+      &:active {
+         @include active;
+      }
+   }
+
+   &__user {
+      margin-right: 33px;
+      margin-left: 33px;
+   }
+
+   &__section-user {
+      fill: $color-white_1;
+      background: $color-gray;
+      
+      &:hover {
+         @include svg-hover;
+      }
+
+      &:active {
+         @include active;
+      }
+   }
+
+   &__cart {
+      margin-right: 10px;
+   }
+
+   &__section-cart {
+      fill: $color-white_1;
+      background: $color-gray;
+      
+      &:hover {
+         @include svg-hover;
+      }
+
+      &:active {
+         @include active;
+      }
+   }
+}

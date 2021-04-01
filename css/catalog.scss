@@ -1,0 +1,319 @@
+@import "_var.scss";
+@import "_mixins.scss";
+@import "_main.scss";
+
+@import "blocks/header";
+
+
+
+.new-top {
+    background: $color-white_9;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-left {
+    padding: 60px 0;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-pink_1;
+    }
+
+    &__text-right {
+    padding: 66px 0;
+    }
+
+    &__text-right span {
+    color: $color-pink_1;
+    }
+}
+
+
+::-webkit-details-marker {
+    display: none;
+}
+
+.main-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 51px 0 65px 16px;
+
+    &__filter {
+    width: 360px;
+    background-color: $color-white_1;
+    box-sizing: border-box;
+    position: relative;
+    outline: none;
+    border: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+        
+        &[open] {
+            box-shadow: $box-shadow;
+        }
+
+        &[open]>summary {
+            color: $color-pink_4;
+            outline: none;
+            border: none;
+        }
+    }
+
+    &__header {
+        text-decoration: none;
+        font-weight: 600;
+        @include font_2;
+        color: $color-black;
+        list-style-type: none;
+        padding: 13px 0 16px 16px;
+    }
+
+    &__subheader {
+        display: block;
+        border-left: 5px solid $color-pink_4;
+        border-bottom: 1px solid $color-white_8;
+        padding: 11px 0 11px 11px;
+        margin-bottom: 18px;
+        margin-left: 16px;
+        font-weight: normal;
+        @include font_2;
+        color: #6F6E6E;
+    }
+
+    &__filter-logo {
+        margin-left: 11px;
+    }
+
+    &__filter-content {
+        position: absolute;
+        background-color: $color-white_1;
+        width: 360px;
+        left: 0;
+        box-shadow: $box-shadow;
+        z-index: 100;
+    }
+
+    &__filter-title[open]>summary {
+        color: $color-pink_4;
+        outline: none;
+        border: none;
+        border-left: 5px solid $color-pink_4;
+        border-bottom: 1px solid $color-white_8;
+    }
+
+    &__filter-item {
+        list-style-type: none;
+        margin-bottom: 11px;
+    }
+
+    &__filter-link {
+        text-decoration: none;
+        @include font_2;
+        white-space: nowrap;
+        color: $color-gray_3;
+        padding: 11px 0 11px 34px;
+    }
+
+    &__filter-nav {
+        margin-left: 30px;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__filter-selection {
+        text-decoration: none;
+        @include font_2;
+        color: $color-gray_10;
+        margin-right: 28px;
+        white-space: normal;
+        position: relative;
+    }
+
+    &__size-wrap {
+        width: 79px;
+        margin-right: 7px;
+    }
+
+    &__input-arrow {
+        margin-left: 10px;
+    }
+
+    &__input-check {
+        display: none;
+
+        &:checked ~ .input-drop {
+            display: block;
+        }
+
+        &:not(:checked) ~ .input-drop {
+            display: none;
+        }
+    }
+
+    &__input-title {
+        display: block;
+        background-color: $color-white_1;
+    }
+
+    &__size-list {
+        list-style-type: none;
+        background: $color-white_1;
+        box-shadow: $box-shadow;
+        margin-top: 5px;
+        position: absolute;
+        padding: 10px 12px 10px 10px;
+        z-index: 100;
+        text-align: left;
+    }
+
+    &__size-list-input {
+        margin-right: 10px;
+    }
+
+    &__size-list-input:first-child,
+    &__size-list-input:nth-child(2),
+    &__size-list-input:nth-child(3) {
+        margin-bottom: 10px;
+    }
+
+    &__size-list li {
+        @include font_2;
+        color: $color-gray_3;
+    }
+}
+
+
+.cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, 360px);
+    padding-bottom: 96px;
+}
+
+/***Наведение на card***/
+.card {
+    background: $color-white_2;
+    position: relative;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+
+    &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 420px;
+    background-color: rgba(58, 56, 56, 0.86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+    }
+
+    &__btn {
+        border: 1px solid $color-white_1;
+        @include font_2;
+        color: $color-white_1;
+        padding: 13px 16px 12px 50px;
+        position: relative;
+        background: rgba(58, 56, 56, 0.43);
+        outline: none;
+        transition: 0.5s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__cart-hover {
+        position: absolute;
+        margin: auto;
+        top: 10px;
+        bottom: 8px;
+        left: 13px;
+    }
+
+    &__content {
+        text-align: left;
+        padding: 25px 28px 20px 16px;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__title {
+        @include font_3;
+        color: $color-black;
+    }
+
+    &__text {
+        padding: 13px 0 18px;
+    }
+
+    &__price {
+        @include font;
+        color: $color-pink_1;
+    }
+}
+
+.card:hover .card__overlay {
+    opacity: 1;
+}
+
+.carouse {
+    border: 1px solid $color-white_8;
+    grid-column: 1/-1;
+    margin: 18px auto 0;
+    padding: 12px 15px;
+
+    & button {
+        outline: 0;
+        background-color: $color-white_1;
+    }
+
+    &_page {
+        font-weight: 300;
+        @include font;
+        text-decoration: none;
+        color: $color-white_8;
+
+        &:not(:nth-child(7)),
+        &:not(:nth-child(8)) {
+            margin-left: 15px;
+        }
+    }
+
+    &_page:hover {
+        color: $color-pink_4;
+        -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+}
+
+.arrow_right {
+    margin-left: 15px;
+}
+
+/***SVG при наведении***/
+.arrow-page:hover {
+    fill: $color-pink_4;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+
+
+@import "blocks/footer";

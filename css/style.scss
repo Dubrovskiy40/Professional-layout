@@ -1,0 +1,217 @@
+@import "_var.scss";
+@import "_mixins.scss";
+@import "_main.scss";
+
+@import "blocks/header";
+
+
+
+.main__top-wrap {
+   background: $color-white_3;
+}
+
+.main__top {
+   background-image: url(../images/index/background-image.png);
+   background-position: -224px bottom;
+   background-repeat: no-repeat;
+
+   &-text {
+      display: flex;
+      align-items: center;
+      height: 764px;
+      justify-content: flex-end;
+   }
+}
+
+.main-title {
+   margin: 0;
+   border-left: 12px solid $color-pink_1;
+   width: 50%;
+   margin-left: 64px;
+   padding-left: 16px;
+   margin-top: -92px;
+
+   & span:first-child {
+   font-weight: 900;
+   font-size: 48px;
+   line-height: 58px;
+   font-style: normal;
+   }
+
+   & span:nth-of-type(2) {
+   font-weight: 700;
+   font-size: 32px;
+   line-height: 38px;
+   font-style: normal;
+   }
+
+   & span:last-child {
+   color: $color-pink_1;
+   font-weight: 700;
+   @include font_8;
+   font-style: normal;
+   }
+}
+
+.center {
+   padding: 0 calc(50% - 1140px / 2);
+}
+
+.main__center {
+   margin-top: 65px;
+   display: grid;
+   gap: 30px;
+   grid-template-columns: repeat(auto-fit, 360px);
+
+   &-wrap {
+   position: relative;
+   }
+
+   &-text {
+   position: absolute;
+   @include font;
+   text-align: center;
+   color: $color-white_1;
+   top: 100px;
+   left: 120px;
+   }
+
+   &-text span {
+   @include font_4;
+   text-align: center;
+   color: $color-pink_1;
+   }
+
+   &-text4 {
+   top: 66px;
+   left: 490px;
+   white-space: nowrap;
+   }
+}
+
+.look4 {
+   grid-column: span 3;
+}
+
+.main__footer {
+   padding: 96px 0;
+   text-align: center;
+
+   &-title {
+   font-size: 30px;
+   line-height: 36px;
+   color: $color-gray;
+   }
+
+   &-text {
+   margin-top: 6px;
+   margin-bottom: 48px;
+   }
+}
+
+.cards {
+   display: grid;
+   gap: 30px;
+   grid-template-columns: repeat(auto-fit, 360px);
+}
+
+/***Наведение на card***/
+.card {
+   background: $color-white_2;
+   position: relative;
+   transition: 0.5s;
+
+   &:hover {
+      box-shadow: $box-shadow;
+   }
+
+   &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 420px;
+      background-color: rgba(58, 56, 56, 0.86);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: 0.5s;
+   }
+
+   &__btn {
+      border: 1px solid $color-white_1;
+      @include font_2;
+      color: $color-white_1;
+      padding: 13px 16px 12px 50px;
+      position: relative;
+      background: rgba(58, 56, 56, 0.43);
+      outline: none;
+      transition: 0.5s;
+
+      &:hover {
+         transform: scale(1.2);
+      }
+   }
+
+   &__cart-hover {
+      position: absolute;
+      margin: auto;
+      top: 10px;
+      bottom: 8px;
+      left: 13px;
+   }
+
+   &__content {
+      text-align: left;
+      padding: 25px 28px 20px 16px;
+   }
+
+   &__link {
+      text-decoration: none;
+   }
+
+   &__title {
+      @include font_3;
+      color: $color-black;
+   }
+
+   &__text {
+      padding: 13px 0 18px;
+   }
+
+   &__price {
+      @include font;
+      color: $color-pink_1;
+   }
+}
+
+.card:hover .card__overlay {
+   opacity: 1;
+}
+
+.browseAllProduc-link {
+   @include font;
+   color: $color-pink_2;
+   border: 1px solid $color-pink_3;
+   padding: 14px 38px;
+   max-width: 211px;
+   margin: 18px auto 0;
+   grid-column: 1/-1;
+   white-space: nowrap;
+   background: $color-white_1;
+   text-decoration: none;
+   @include btn;
+   
+   &:hover {
+      color: $color-white_1;
+      background-color: $color-pink_1;
+   }
+
+   &:active {
+      @include active;
+      transform: rotateX(360deg);
+   }
+}
+
+@import "blocks/footer";
