@@ -60,6 +60,10 @@
             color: $color-pink_4;
             outline: none;
             border: none;
+
+            & .main-top__filter-logo {
+                fill: #EF5B70;
+            }
         }
     }
 

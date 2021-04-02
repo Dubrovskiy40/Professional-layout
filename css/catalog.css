@@ -192,6 +192,10 @@ button {
   border: none;
 }
 
+.main-top__filter[open] > summary .main-top__filter-logo {
+  fill: #EF5B70;
+}
+
 .main-top__header {
   text-decoration: none;
   font-weight: 600;
