@@ -1,0 +1,257 @@
+@import "_var.scss";
+@import "_mixins.scss";
+@import "_main.scss";
+
+@import "blocks/header";
+
+
+
+.new-top {
+    background: $color-white_9;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-left {
+        padding: 60px 0;
+        @include font_4;
+        color: $color-pink_1;
+    }
+}
+
+
+.main {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 96px 0 128px;
+    } 
+
+    &__cards {
+    display: flex;
+    flex-direction: column;
+    width: 652px / 1140px * 100%;
+    margin-right: 128px;
+    }
+
+    &__card {
+        display: flex;
+        width: 100%;
+        background: $color-white_2;
+        transition: 0.5s;
+
+
+        &:hover {
+            box-shadow: $box-shadow;
+        }
+    }
+
+    &__card-1 {
+        margin-bottom: 40px;
+    }
+
+    &__goods {
+        width: 262px / 652px * 100%; /*test scss*/
+    }
+
+    &__card-description {
+        padding: 22px 97px 62px 31px;
+    }
+
+    &__card-title {
+        @include font_4;
+        color: $color-gray;
+        margin-bottom: 42px;
+    }
+
+    &__card__characteristics {
+        list-style-type: none;
+        @include font_7;
+        color: $color-gray_6;
+
+        & span {
+            color: $color-pink_1;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+
+    &__card-input {
+        border: 1px solid $color-white_7;
+        @include font_6;
+        color: $color-gray_7;
+        margin-left: 25px;
+        max-width: 43px;
+    }
+
+    &__cross {
+        color: $color-gray_6;
+        padding-top: 28px;
+        padding-right: 22px;
+
+        &:hover {
+            fill: $color-pink_1;
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+
+    &__btn {
+        padding-top: 72px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn-clear {
+        font-weight: 300;
+        @include font_2;
+        color: $color-gray_5;
+        padding: 16px 40px;
+        border: 1px solid $color-gray_5;
+        background: $color-white_1;
+        @include btn;
+
+        &:hover {
+            color: $color-white_1;
+            background: $color-pink_1;
+            border-color: $color-pink_1;
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+
+    &__btn-continue {
+        font-weight: 300;
+        @include font_2;
+        color: $color-gray_8;
+        padding: 16px 40px;
+        border: 1px solid $color-gray_5;
+        background: $color-white_1;
+        text-decoration: none;
+        @include btn;
+
+        &:hover {
+            color: $color-white_1;
+            background: $color-pink_1;
+            border-color: $color-pink_1;
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-total {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 58px;
+    }
+
+    &__form-title {
+        font-weight: 300;
+        @include font;
+        color: $color-gray;
+        margin-bottom: 20px;
+    }
+
+    &__form-input {
+        border: 1px solid $color-gray_5;
+        margin-bottom: 21px;
+        padding: 12px 0 15px 16px;
+
+        &:hover::placeholder {
+            color: $color-gray_4;
+        }
+    }
+
+    &__form-button {
+        font-weight: 300;
+        @include font_5;
+        color: $color-gray_8;
+        border: 1px solid $color-gray_5;
+        padding: 10px 14px;
+        max-width: 100px;
+        white-space: nowrap;
+        background-color: $color-white_1;
+        @include btn;
+
+        &:hover {
+            color: $color-white_1;
+            background: $color-pink_1;
+            border-color: $color-pink_1;
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+
+    &__total {
+        background: $color-white_10;
+        padding: 39px 43px 42px;
+    }
+
+    &__total-subtitle {
+        @include font_5;
+        color: $color-gray_8;
+        text-align: end;
+        margin-bottom: 12px;
+    }
+
+    &__total-title {
+        font-weight: 300;
+        @include font;
+        color: $color-gray;
+        text-align: end;
+
+        & span {
+            color: $color-pink_1;
+        }
+    }
+
+    &__total-line {
+        border: 1px solid $color-white_11;
+        margin-top: 21px;
+        margin-bottom: 17px;
+    }
+
+    &__total-button {
+        font-weight: 300;
+        @include font;
+        color: $color-white_1;
+        padding: 15px 42px;
+        background: $color-pink_1;
+        white-space: nowrap;
+        @include btn;
+
+        &:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+}
+
+
+@import "blocks/footer";

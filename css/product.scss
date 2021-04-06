@@ -1,0 +1,302 @@
+@import "_var.scss";
+@import "_mixins.scss";
+@import "_main.scss";
+
+@import "blocks/header";
+
+
+
+.new-top {
+    background: $color-white_9;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-left {
+        padding: 60px 0;
+        @include font_4;
+        color: $color-pink_1;
+    }
+
+    &__text-right {
+        padding: 66px 0;
+    }
+
+    &__text-right span {
+        color: $color-pink_1;
+    }
+}
+
+
+
+.main-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white_6;
+    position: relative;
+
+    &__arrow-product {
+        fill: $color-black;
+        background-color: rgba(42, 42, 42, 0.15);
+        padding: 12px 17px;
+        position: absolute;
+        outline: none;
+        &:hover {
+            fill: $color-pink_1;
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+
+    &__arrow-left {
+        margin-right: auto;
+        left: 5px;
+    }
+
+    &__product-image {
+    padding: 11px 0 42px;
+    }
+
+    &__arrow-right {
+    margin-left: auto;
+    right: 5px;
+    }
+}
+
+
+
+.main-center {
+    border: 1px solid $color-white_7;
+    margin-bottom: 129px;
+    padding: 65px 0;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: $color-white_1;
+
+    &__wrap {
+        max-width: 641px;
+        text-align: center;
+    }
+
+    &__text {
+        font-weight: 300;
+        color: $color-pink_1;
+        padding-bottom: 12px;
+        position: relative;
+        text-align: center;
+    }
+
+    &__text::after {
+        content: "";
+        position: absolute;
+        width: 63px;
+        bottom: 0;
+        height: 3px;
+        left: 50%;
+        background-color: $color-pink_4;
+        margin: 0 0 0 -30px;
+    }
+
+    &__title {
+        font-weight: 300;
+        @include font_6;
+        color: $color-gray_9;
+        padding: 12px 0 48px 0;
+    }
+
+    &__description {
+        margin-bottom: 32px;
+    }
+
+    &__price {
+        font-weight: 300;
+        @include font_4;
+        color: $color-pink_4;
+    }
+
+    &__line {
+        border: 1px solid $color-white_7;
+        margin-top: 65px;
+        margin-bottom: 65px;
+    }
+
+    &__filter {
+        display: flex;
+        margin-bottom: 48px;
+        justify-content: center;
+    }
+
+    &__filter-link {
+        text-decoration: none;
+        @include font_2;
+        color: $color-gray_3;
+        margin-right: 28px;
+        /* position: relative; */
+    }
+
+    &__input-check {
+        display: none;
+
+        &:checked ~ .input-drop {
+            display: block;
+        }
+
+        &:not(:checked) ~ .input-drop {
+            display: none;
+        }
+    }
+
+    &__input-title {
+        background-color: $color-white_1;
+        display: block;
+    }
+
+    &__size-list {
+        list-style-type: none;
+        background: $color-white_1;
+        box-shadow: $box-shadow;
+        margin-top: 5px;
+        position: absolute;
+        display: none;
+        padding: 10px 12px 10px;
+        z-index: 100;
+        text-align: left;
+    }
+
+    &__size-list-input {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__input-arrow {
+        margin-left: 10px;
+    }
+    
+    &__button {
+        @include font;
+        color: $color-pink_2;
+        background: $color-white_1;
+        border: 1px solid $color-pink_3;
+        padding: 14px 56px 14px 23px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        outline: none;
+        
+        &:hover {
+            color: $color-white_1;
+            background: $color-pink_1;
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+}
+
+.cart-button {
+    fill: $color-pink_4;
+    padding-right: 23px;
+}
+
+.main-center__button:hover .cart-button {
+    fill: $color-white_1;
+    background: $color-pink_1;
+}
+
+.cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, 360px);
+    padding-bottom: 128px;
+    list-style-type: none;
+}
+
+/***Наведение на card***/
+.card {
+    background: $color-white_2;
+    position: relative;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+
+    &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 420px;
+    background-color: rgba(58, 56, 56, 0.86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+    }
+
+    &__btn {
+        border: 1px solid $color-white_1;
+        @include font_2;
+        color: $color-white_1;
+        padding: 13px 16px 12px 50px;
+        position: relative;
+        background: rgba(58, 56, 56, 0.43);
+        outline: none;
+        transition: 0.5s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__cart-hover {
+        position: absolute;
+        margin: auto;
+        top: 10px;
+        bottom: 8px;
+        left: 13px;
+    }
+
+    &__content {
+        text-align: left;
+        padding: 25px 28px 20px 16px;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__title {
+        @include font_3;
+        color: $color-black;
+    }
+
+    &__text {
+        padding: 13px 0 18px;
+    }
+
+    &__price {
+        @include font;
+        color: $color-pink_1;
+    }
+}
+
+.card:hover .card__overlay {
+    opacity: 1;
+}
+
+
+
+@import "blocks/footer";

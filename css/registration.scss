@@ -1,0 +1,138 @@
+@import "_var.scss";
+@import "_mixins.scss";
+@import "_main.scss";
+
+@import "blocks/header";
+
+
+
+.new-top {
+    background: $color-white_9;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-left {
+        padding: 60px 0;
+        @include font_4;
+        color: $color-pink_1;
+        text-transform: uppercase;
+    }
+}
+
+.main {
+
+    &__wrapper {
+        display: flex;
+        padding-top: 64px;
+        padding-bottom: 96px;
+    }
+
+    &__form {
+        margin-right: 128px;
+    }
+
+    &__form-registration {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-title {
+        font-weight: 300;
+        @include font;
+        color: $color-gray;
+    }
+
+    &__form-input {
+        @include font_3;
+        color: $color-gray_4;
+        border: 1px solid $color-gray_5;
+        margin-top: 21px;
+        padding: 12px 0 15px 16px;
+
+        &:hover::placeholder {
+            color: $color-gray_4;
+        }
+    }
+
+    &__wrap-radio-box {
+        display: flex;
+    }
+
+    &__label-check {
+        margin: 31px 20px 33px 0;
+        @include font_5;
+        color: $color-black;
+    }
+
+    &__input-check {
+        margin-right: 10px;
+    }
+
+    &__form-text {
+        margin-top: 15px;
+        margin-bottom: 39px;
+        @include font_3;
+        color: $color-gray_4;
+    }
+
+    &__form-button {
+        @include font_2;
+        border: 1px solid $color-gray_5;
+        color: $color-black;
+        background-color: $color-white_1;
+        padding: 16px 24px 16px 29px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        @include btn;
+
+        &:hover {
+            fill: $color-white_1;
+            color: $color-white_1;
+            background-color: $color-pink_1;
+        }
+
+        &:active {
+            @include active;
+        }
+    }
+
+    &__arrow-hor {
+        margin-left: 20px;
+        margin-right: -5px;
+    }
+
+    &__advantages-title {
+        text-transform: uppercase;
+    }
+
+    &__advantages-paragraph {
+        margin: 22px 0;
+    }
+
+    &__advantages-text {
+        font-weight: 300;
+        @include font_4;
+        color: $color-black;
+    }
+
+    &__bonus {
+        list-style-type: none;
+    }
+
+    &__bonus-list:nth-child(even) {
+        margin: 16px 0;
+    }
+
+    &__bonus-list::before {
+        content: url(../images/registration/check-mark.svg);
+        margin-right: 23px;
+    }
+}
+
+
+
+@import "blocks/footer";
