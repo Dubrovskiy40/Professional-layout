@@ -1113,7 +1113,7 @@
       }
    }
 
-   .card:nth-last-child(-n+2):not(:nth-child(even)) {
+   .card:last-child:not(:nth-child(even)) {
       display: none;
    }
 
