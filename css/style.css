@@ -180,8 +180,8 @@ button {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .menu-burger__duble-list {
@@ -1130,7 +1130,7 @@ button {
 
 .cart-main__close {
   background-color: #FFFFFF;
-  margin: 20px 20px auto 0;
+  margin: 28px 24px auto 0;
   outline: none;
 }
 
@@ -2290,7 +2290,7 @@ button {
     width: 42%;
   }
   .cart-main__card-description {
-    padding: 13px 31px 38px 17px;
+    padding: 13px 0 38px 17px;
   }
   .cart-main__card-title {
     font-size: 16px;
@@ -2310,9 +2310,11 @@ button {
     margin-left: 15px;
     max-width: 30px;
   }
+  .cart-main__close {
+    margin: 17px 12px auto 0;
+  }
   .cart-main__cross {
-    padding-top: 17px;
-    padding-right: 12px;
+    width: 10px;
   }
   .cart-main__btn {
     padding-top: 30px;
