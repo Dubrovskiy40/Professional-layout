@@ -126,6 +126,10 @@
       font-size: 20px;
       line-height: 24px;
       color: $color-gray;
+<<<<<<< HEAD
+=======
+      max-width: 95%;
+>>>>>>> lesson_6
    }
 
    &__wrap-form {
@@ -136,11 +140,24 @@
    &__span-title {
       font-weight: 700;
       font-size: 24px;
+<<<<<<< HEAD
       line-height: 40px;
+=======
+      line-height: 38px;
+>>>>>>> lesson_6
       text-align: center;
       color: $color-gray;
    }
 
+<<<<<<< HEAD
+=======
+   &__span-text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+   }
+
+>>>>>>> lesson_6
    &__form-title {
       font-weight: 400;
       font-size: 18px;
@@ -274,4 +291,113 @@
    &__fa-twitter {
       padding: 9.5px 8px;
    }
+<<<<<<< HEAD
+=======
+}
+
+
+
+@media (max-width: 1190px) {
+   .our-pluses {
+      
+      &__wrap {
+         justify-content: center;
+         padding: 48px 0 64px;
+      }
+
+      &__all {
+         flex-direction: column;
+         width: 49%;
+      }
+
+      &__title {
+         margin-top: 28px;
+         margin-bottom: 16px;
+      }
+
+      &__plus {
+         padding-top: 48px;
+      }
+
+      &__sales-discounts {
+         margin-left: 0;
+         margin-right: 0;
+      }
+   }
+
+   .feedback {
+      background-size: cover;
+
+      &__content {
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &__wrap-text {
+         width: 47%;
+         padding: 53px 0 48px;
+      }
+
+      &__wrap-form {
+         width: 47%;
+         padding: 0 0 140px 0; 
+      }
+   }
+}
+
+
+
+@media (max-width: 768px) {
+   .our-pluses {
+
+      &__wrap {
+         padding: 48px 0 81px;
+      }
+
+      &__all {
+         width: 93%;
+      }
+   }
+
+   .feedback {
+
+      &__wrap-text {
+         width: 100%;
+         padding: 54px 0 59px;
+      }
+
+      &__text {
+         font-size: 18px;
+         line-height: 22px;
+      }
+
+      &__span-text {
+         font-size: 14px;
+         line-height: 22px;
+      }
+
+      &__wrap-form {
+         width: 100%;
+         padding: 0 0 110px 0;
+      }
+   }
+
+   .footer {
+
+      &__wrap {
+         flex-direction: column-reverse;
+      }
+
+      &__share {
+         padding: 43px 0 0;
+         justify-content: center;
+      }
+
+      &__copyriting {
+         padding: 25px 0 24px;
+         text-align: center;
+      }
+   }
+
+>>>>>>> lesson_6
 }

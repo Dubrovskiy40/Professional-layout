@@ -2,6 +2,10 @@
    margin: 0;
    padding: 0;
    border: 0;
+<<<<<<< HEAD
+=======
+   /* box-sizing: border-box; */
+>>>>>>> lesson_6
 }
 
 body {
@@ -15,13 +19,21 @@ body {
 }
 
 .container {
+<<<<<<< HEAD
    max-width: 1140px;
+=======
+   max-width: 1140px; /* padding: 0 calc(50% - 1140px / 2) */;
+>>>>>>> lesson_6
    margin: 0 auto;
 }
 
 .text {
+<<<<<<< HEAD
    font-size: 14px;
    line-height: 17px;
+=======
+   @include font_2;
+>>>>>>> lesson_6
    color: $color-gray_2;
 }
 
@@ -32,4 +44,20 @@ body {
 input, 
 button {
    font-family: inherit;
+<<<<<<< HEAD
 } 
+=======
+} 
+
+@media (max-width: 1190px) {
+   .container {
+      max-width: calc(768px - 16px * 2); /* padding: 0 calc(50% - 736px / 2); */
+   }
+}
+
+@media (max-width: 768px) {
+   .container {
+      max-width: calc(375px - 8px * 2); /* padding: 0 calc(50% - 343px / 2); */
+   }
+}
+>>>>>>> lesson_6
