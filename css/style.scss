@@ -7,10 +7,16 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main__top-wrap {
+=======
+.index-main__top-wrap {
+>>>>>>> main
    background: $color-white_3;
+   height: calc(100vh - 77px);
 }
 
+<<<<<<< HEAD
 .main__top {
 =======
 .index-main__top-wrap {
@@ -20,6 +26,9 @@
 
 .index-main__top {
 >>>>>>> lesson_6
+=======
+.index-main__top {
+>>>>>>> main
    background-image: url(../images/index/background-image.png);
    background-position: -224px bottom;
    background-repeat: no-repeat;
@@ -28,14 +37,19 @@
       display: flex;
       align-items: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
       height: 764px;
 =======
       height: calc(100vh - 77px);
 >>>>>>> lesson_6
+=======
+      height: calc(100vh - 77px);
+>>>>>>> main
       justify-content: flex-end;
    }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .main-title {
    margin: 0;
@@ -48,6 +62,12 @@
    border-left: 12px solid $color-pink_1;
    width: 48%;
 >>>>>>> lesson_6
+=======
+.index-main-title {
+   margin: 0;
+   border-left: 12px solid $color-pink_1;
+   width: 48%;
+>>>>>>> main
    padding-left: 16px;
    margin-top: -92px;
 
@@ -61,11 +81,15 @@
    & span:nth-of-type(2) {
    font-weight: 700;
 <<<<<<< HEAD
+<<<<<<< HEAD
    font-size: 32px;
    line-height: 38px;
 =======
    @include font_8;
 >>>>>>> lesson_6
+=======
+   @include font_8;
+>>>>>>> main
    font-style: normal;
    }
 
@@ -78,25 +102,37 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .center {
    padding: 0 calc(50% - 1140px / 2);
 }
 
 .main__center {
+=======
+.index-main__center {
+>>>>>>> main
    margin-top: 65px;
-   display: grid;
-   gap: 30px;
-   grid-template-columns: repeat(auto-fit, 360px);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
 
    &-wrap {
-   position: relative;
+      width: 32%;
+      min-height: 260px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &-wrap:not(:last-child) {
+      margin-bottom: 30px;
    }
 
    &-text {
-   position: absolute;
    @include font;
    text-align: center;
    color: $color-white_1;
+<<<<<<< HEAD
    top: 100px;
    left: 120px;
 =======
@@ -123,6 +159,8 @@
    text-align: center;
    color: $color-white_1;
 >>>>>>> lesson_6
+=======
+>>>>>>> main
    }
 
    &-text span {
@@ -133,16 +171,39 @@
 
    &-text4 {
 <<<<<<< HEAD
+<<<<<<< HEAD
    top: 66px;
    left: 490px;
    white-space: nowrap;
+=======
+      white-space: nowrap;
+>>>>>>> main
    }
 }
 
-.look4 {
-   grid-column: span 3;
+.wrap-women {
+   background-image: url(../images/index/look-1.png);
+   background-size: cover;
 }
 
+.wrap-men {
+   background-image: url(../images/index/look-2.png);
+   background-size: cover;
+}
+
+.wrap-kids {
+   background-image: url(../images/index/look-3.png);
+   background-size: cover;
+}
+
+.wrap-accesories {
+   background-image: url(../images/index/look-4.png);
+   background-size: cover;
+   width: 100%;
+   min-height: 180px;
+}
+
+<<<<<<< HEAD
 .main__footer {
 =======
       white-space: nowrap;
@@ -174,6 +235,10 @@
 
 .index-main__footer {
 >>>>>>> lesson_6
+=======
+
+.index-main__footer {
+>>>>>>> main
    padding: 96px 0;
    text-align: center;
 
@@ -194,9 +259,13 @@
    gap: 30px;
    grid-template-columns: repeat(auto-fit, 360px);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
    list-style-type: none;
 >>>>>>> lesson_6
+=======
+   list-style-type: none;
+>>>>>>> main
 }
 
 /***Наведение на card***/
@@ -210,12 +279,18 @@
    }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
    &__img {
       width: 100%;
    }
 
+<<<<<<< HEAD
 >>>>>>> lesson_6
+=======
+>>>>>>> main
    &__overlay {
       position: absolute;
       top: 0;
@@ -288,21 +363,30 @@
    padding: 14px 38px;
    max-width: 211px;
 <<<<<<< HEAD
+<<<<<<< HEAD
    margin: 18px auto 0;
    grid-column: 1/-1;
 =======
    margin: 48px auto 0;
 >>>>>>> lesson_6
+=======
+   margin: 48px auto 0;
+>>>>>>> main
    white-space: nowrap;
    background: $color-white_1;
    text-decoration: none;
    @include btn;
+<<<<<<< HEAD
 <<<<<<< HEAD
    
 =======
    display: inline-block;
 
 >>>>>>> lesson_6
+=======
+   display: inline-block;
+
+>>>>>>> main
    &:hover {
       color: $color-white_1;
       background-color: $color-pink_1;
@@ -315,8 +399,11 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import "blocks/footer";
 =======
+=======
+>>>>>>> main
 
 
 /***catalog***/
@@ -908,7 +995,11 @@
    &__form-input {
       border: 1px solid $color-gray_5;
       margin-bottom: 21px;
+<<<<<<< HEAD
       padding: 12px 0 15px 16px;
+=======
+      padding: 12px 16px 15px;
+>>>>>>> main
 
       &:hover::placeholder {
          color: $color-gray_4;
@@ -1017,7 +1108,11 @@
       color: $color-gray_4;
       border: 1px solid $color-gray_5;
       margin-top: 21px;
+<<<<<<< HEAD
       padding: 12px 0 15px 16px;
+=======
+      padding: 12px 16px 15px;
+>>>>>>> main
 
       &:hover::placeholder {
          color: $color-gray_4;
@@ -1555,5 +1650,9 @@
          margin-top: 40px;
       }
    }
+<<<<<<< HEAD
 }
 >>>>>>> lesson_6
+=======
+}
+>>>>>>> main
