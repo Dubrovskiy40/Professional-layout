@@ -14,7 +14,7 @@
    }
 
    &__title {
-      font-size: 19.96px;
+      font-size: 20px;
       line-height: 24px;
       color: $color-white_4;
       margin-top: 28px;
@@ -167,8 +167,7 @@
    &__button { 
       border: none;
       box-sizing: border-box;
-      font-size: 14px;
-      line-height: 17px;
+      @include font_2;
    }
 
    &__input {
@@ -182,8 +181,7 @@
 
       &::placeholder {
          color: $color-gray;
-         font-size: 14px;
-         line-height: 17px;
+         @include font_2;
       }
 
       &:hover::placeholder {
@@ -236,8 +234,8 @@
    }
 
    &__wrap-text {
-      font-size: 16px;
-      line-height: 19px;
+      font-weight: normal;
+      @include font;
       color: $color-white_4;
    }
 
@@ -355,8 +353,7 @@
       }
 
       &__text {
-         font-size: 18px;
-         line-height: 22px;
+         @include font_6;
       }
 
       &__span-text {
