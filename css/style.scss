@@ -72,6 +72,7 @@
 
    &-text {
    @include font;
+   font-weight: normal;
    text-align: center;
    color: $color-white_1;
    }
@@ -250,12 +251,13 @@
 
    &__text-left {
    padding: 60px 0;
-   font-size: 24px;
-   line-height: 29px;
+   font-weight: normal;
+   @include font_4;
    color: $color-pink_1;
    }
 
    &__text-right {
+   font-weight: 300;
    padding: 66px 0;
    }
 
